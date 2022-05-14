@@ -1,4 +1,5 @@
 <view class="page">
+  <!-- 轮播图区域 -->
   <view wx:if="{{ swiperList.length }}" class="swiper-container">
     <swiper bindchange="onSwiperChange">
       <swiper-item wx:for="{{ swiperList }}" wx:key="index">
@@ -10,5 +11,20 @@
     </view>
   </view>
   
-  
+  <!-- 会员/积分区域 -->
+  <view class="member-area">
+    <view class="vip-box">
+      <image src="../../assets/images/home-selected.png"></image>
+      <view class="meta">
+        <view class="title">尊敬的用户</view>
+        <progress-bar value="30" />
+        <view class="tips">会员可享【闲时优惠】等多项权益</view>
+      </view>
+    </view>
+
+    <view class="coin-box">
+      <image mode="aspectFill" src="../../assets/images/me-selected.png"></image>
+      <view class="currency">51</view>
+    </view>
+  </view>
 </view>
