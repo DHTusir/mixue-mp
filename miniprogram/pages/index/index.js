@@ -1,3 +1,4 @@
+import swiper from "../../api/swiper"
 
 Page({
 
@@ -23,7 +24,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad() {
-    wx.cloud.database().collection('mx_swiper').get().then(res => {
+    swiper.list().then(res => {
       this.setData({
         swiperList: res.data
       })

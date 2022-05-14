@@ -3,6 +3,6 @@ const list = () => {
   return db.collection('mx_swiper').get();
 }
 
-module.exports = {
+export default {
   list
 }
